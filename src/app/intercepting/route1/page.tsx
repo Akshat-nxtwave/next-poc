@@ -5,7 +5,9 @@ const Route1 = () => {
   return (
     <div>
       <h3>Route 1</h3>
-      <Link href="/intercepting/route2">nav to route 2</Link>
+      <Link data-test-id="test-link" href="/intercepting/route2">
+        nav to route 2
+      </Link>
       <br />
       <Link href="/intercepting/route1/sub-route">to sub route</Link>
       <br />

@@ -1,5 +1,6 @@
 "use client";
 
+import { SessionProvider, useSession } from "next-auth/react";
 import dynamic from "next/dynamic";
 import React from "react";
 
@@ -8,10 +9,12 @@ const Lazy = dynamic(() => import("./LazyComponent"), { ssr: false });
 
 const App = () => {
   return (
-    <div>
-      <div>App</div>
-      <Lazy />
-    </div>
+    <SessionProvider>
+      <div>
+        <div>App</div>
+        <Lazy />
+      </div>
+    </SessionProvider>
   );
 };
 
