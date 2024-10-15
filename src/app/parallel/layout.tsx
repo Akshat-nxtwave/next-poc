@@ -1,12 +1,8 @@
 "use client";
-import {
-  useSelectedLayoutSegment,
-  useSelectedLayoutSegments,
-} from "next/navigation";
+import { useSelectedLayoutSegments } from "next/navigation";
 import React from "react";
 
 const Layout = ({
-  children,
   subpart1,
   subpart2,
   subpart3,

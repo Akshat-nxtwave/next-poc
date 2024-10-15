@@ -1,6 +1,6 @@
 import { revalidatePath } from "next/cache";
 
-const GET = async (req: Request): Promise<Response> => {
+const GET = async (): Promise<Response> => {
   revalidatePath("/");
   return new Response(JSON.stringify({ data: "Success!" }));
 };

@@ -1,5 +1,3 @@
-import { revalidatePath } from "next/cache";
-
 const GET = async (req: Request): Promise<Response> => {
   const { searchParams } = new URL(req.url);
 

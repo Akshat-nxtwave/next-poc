@@ -8,9 +8,7 @@ const HTMLStreaming = async () => {
   //   await new Promise((resolve) => setTimeout(resolve, 2000));
   const d = await fetch("https://jsonplaceholder.typicode.com/photos/3");
 
-  const data = await new Promise((res) =>
-    setTimeout(() => res(d.json()), 2000)
-  );
+  await new Promise((res) => setTimeout(() => res(d.json()), 2000));
   // (data) => setTimeout(async () => await data.json(), 2000)
 
   return (

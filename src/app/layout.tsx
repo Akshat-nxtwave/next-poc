@@ -1,22 +1,9 @@
-import { Metadata, ResolvingMetadata } from "next";
 import React from "react";
 
-type Props = {
-  params: { id: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+export const metadata = {
+  title: "Custom Title",
+  description: "Cusotm Description",
 };
-
-export async function generateMetadata(
-  data: Props,
-  parent: ResolvingMetadata
-): Promise<Metadata> {
-  const a = await parent;
-  console.log("data => ", a);
-  return {
-    title: "This is next app",
-    openGraph: {},
-  };
-}
 
 const Layout = ({ children }: { children: React.ReactElement }) => {
   return (

@@ -11,7 +11,21 @@ interface Prop {
 // }
 const page = (obj: Prop) => {
   console.log(obj, "aaaaaa");
-  return <div>catch all page</div>;
+  return (
+    <div>
+      <div>catch all page - complete param details</div>
+      <div>
+        Param:{" "}
+        {obj.params["catch-all"].map((p) => (
+          <span key={p}>{p} &nbsp;</span>
+        ))}
+      </div>
+      <div>
+        Search Params :
+        <div>searchParams: {JSON.stringify(obj.searchParams)}</div>
+      </div>
+    </div>
+  );
 };
 
 export default page;

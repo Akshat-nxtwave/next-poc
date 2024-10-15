@@ -11,6 +11,7 @@ const ComponentWithFetch = async () => {
       res(true);
     }, 2000)
   );
+
   return (
     <div
       style={{
